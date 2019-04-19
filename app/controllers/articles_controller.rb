@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
             redirect_to articles_show(@article)
         else
             render 'new'
+        end
     end
 
     private
