@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
         @article = Article.new(article_params)
         if @article.save
             flash[:notice] = "Article was successfully created"
-            redirect_to articles_show(@article)
+            redirect_to article_path(@article)
         else
             render 'new'
         end
@@ -32,7 +32,7 @@ class ArticlesController < ApplicationController
             render 'edit'
         end
     end
-    
+
     def index
         @articles = Article.all
     end
