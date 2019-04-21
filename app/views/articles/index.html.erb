@@ -1,0 +1,21 @@
+<html>
+<body>
+<h1>Welcome to Blog</h1>
+
+<h2>Showing all articles</h2>
+<table>
+<tr>
+<th>Title</th>
+<th>DEscription</th>
+</tr>
+
+<% @articles.each do |article|%>
+<tr>
+<td><%= article.title %></td>
+<td><%= article.description %></td>
+</tr>
+<% end%>
+
+</table>
+</body>
+</html>
